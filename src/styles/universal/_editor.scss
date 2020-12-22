@@ -1,0 +1,21 @@
+.editor{
+    border: 1px solid blue;
+    padding: 1rem;
+    margin: 5rem 0;
+    overflow: hidden;
+    .template-board{
+        // display: flex;
+        // justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr 240px;
+        grid-gap: 1rem;
+        .template-editor{
+            flex: 1;
+            padding: 1rem;
+            border: 1px solid green;
+        }
+        .editing-toolbar{
+            border: 1px solid;
+        }
+    }
+}
