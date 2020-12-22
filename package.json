@@ -1,15 +1,21 @@
+
 {
   "name": "ecommerce",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@sendgrid/mail": "^7.4.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.21.0",
+    "bcryptjs": "^2.4.3",
     "crypto-js": "^4.0.0",
     "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
     "localforage": "^1.9.0",
+    "mongoose": "^5.11.8",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-context-devtool": "^2.0.0",
@@ -17,13 +23,15 @@
     "react-icons": "^4.1.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
+    "validator": "^13.5.2",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start":"nodemon ./api/app.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+    
   },
   "eslintConfig": {
     "extends": [
