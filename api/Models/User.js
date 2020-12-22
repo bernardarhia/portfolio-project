@@ -5,9 +5,13 @@ const jwt = require("jsonwebtoken");
 
 const Template = require("../Models/TEMPLATES/Template");
 const userSchema = new mongoose.Schema({
-  name: {
+  fullname: {
     type: String,
     required: true,
+    trim: true,
+  }, 
+  username: {
+    type: String,
     trim: true,
   },
   email: {
@@ -20,11 +24,6 @@ const userSchema = new mongoose.Schema({
         throw new Error("Email Is Not Valid");
       }
     },
-  },
-  phoneNum: {
-    type: Number,
-    required: true,
-    trim: true,
   },
   age: {
     type: Number,
@@ -42,14 +41,15 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
     validate: (value) => {
-      if (value.length < 6) {
+      if (value.length < 8) {
         throw new Error(
           "Password length should be at least,6(six) characters"
         );
       }
-      if (value.toLowerCase().includes("password")) {
-        throw new Error('Password cannot be "password"');
+      if (value.toLowerCase().includes("password") || value.toLowerCase().includes('123456789')) {
+        throw new Error('Password is too simple');
       }
+      
     },
     trim: true,
   }
