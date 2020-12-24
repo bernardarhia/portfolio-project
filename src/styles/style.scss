@@ -1,13 +1,15 @@
-// variables
-
 // utilities
-
+@import './utilities/variables';
 // configs
-
+@import './configs/config';
 // components
-@import './universal/header';
-@import './universal/editor'
+
 // pages
 
+// universal
+@import './universal/button';
+@import './universal/input';
+@import './universal/loader';
+@import './universal/tooltip';
 
 // templates

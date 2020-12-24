@@ -1,16 +1,20 @@
 import React from "react";
-import TemplateOneContext from "./context/templateOneContext";
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
-import editor from "./pages/editor";
+import Button from "./components/containers/Button";
+import Input from "./components/containers/Input.";
+import Tooltip from "./components/containers/Tooltip";
 function App() {
   return (
-    <TemplateOneContext>
-      <Router>
-        <Switch>
-          <Route path='/editor' exact component={editor} />
-        </Switch>
-      </Router>
-    </TemplateOneContext>
+    <>
+      <Button className="btn btn_shadow btn_small blue">Log in</Button>
+      <Input type="text" className="input" />
+          <Tooltip
+            text="Bernard Arhia"
+            color="#3736d4"
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+          />
+       
+    </>
   );
 }
 
