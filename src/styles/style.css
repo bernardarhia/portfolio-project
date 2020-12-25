@@ -42,7 +42,6 @@ label {
   height: 100%;
   display: grid;
   place-items: center;
-  border: 1px solid red;
 }
 .form-container .input-wrapper form {
   max-width: 500px;
@@ -55,24 +54,68 @@ label {
 .form-container .input-wrapper form > div input, .form-container .input-wrapper form > div button {
   width: 100%;
 }
-.form-container .glass_bg {
-  height: 100%;
-  background: rgba(253, 253, 253, 0.15);
-  backdrop-filter: blur(400px);
+.form-container .right-img__wrapper {
   position: relative;
   display: grid;
   place-items: center;
+  box-shadow: 10px 0 30px #00000012;
 }
-.form-container .glass_bg .img_bg p {
+.form-container .right-img__wrapper .img_bg {
   text-align: center;
-  font-size: 18px;
-  margin: 2.5rem 0;
-  color: #333;
 }
-.form-container .glass_bg .img_bg p a {
-  color: #5352ED;
+.form-container .right-img__wrapper .img_bg img {
+  width: 100%;
+}
+.form-container .right-img__wrapper .img_bg p {
+  margin-top: 2rem;
+}
+.form-container .right-img__wrapper .corner-blue {
+  position: absolute;
+  width: 180px;
+  height: 170px;
+  background: #5352ED;
+  top: 0;
+  right: 0;
+  border-bottom-right-radius: 150px;
+}
+.form-container .right-img__wrapper .bottom-circles {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.form-container .right-img__wrapper .circles {
+  display: flex;
+  gap: 0.5rem;
+}
+.form-container .right-img__wrapper .circles .circle {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+}
+.form-container .right-img__wrapper .circles .light-yellow {
+  background: rgba(255, 205, 77, 0.63);
+}
+.form-container .right-img__wrapper .circles .deep-yellow {
+  background: yellow;
 }
 
+@media only screen and (max-width: 768px) {
+  .form-container {
+    display: block;
+  }
+  .form-container .glass_bg {
+    display: none;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .form-container {
+    display: block;
+  }
+  .form-container .input-wrapper form {
+    width: 98%;
+    margin: 0 auto;
+  }
+}
 .btn {
   border: none;
   outline: none;

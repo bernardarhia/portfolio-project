@@ -7,7 +7,6 @@
         height: 100%;
         display: grid;
         place-items: center;
-        border: 1px solid red;
         form{
             max-width: 500px;
             padding: 2rem;
@@ -20,23 +19,47 @@
         }
         }
     }
-    .glass_bg{
-        height: 100%;
-        background: rgba(253, 253, 253, 0.15);
-        backdrop-filter: blur(400px);
+    .right-img__wrapper{
         position: relative;
         display: grid;
-        place-items:center;
-
+        place-items: center;
+        box-shadow: 10px 0 30px #00000012;
         .img_bg{
+            img{
+                width: 100%;
+            }
+            text-align: center;
             p{
-                text-align: center;
-                font-size: 18px;
-                margin: 2.5rem 0;
-                color: $dark_text;
-                a{
-                    color: $main_color;
-                }
+                margin-top: 2rem;
+            }
+        }
+        .corner-blue{
+            position: absolute;
+            width: 180px;
+            height: 170px;
+            background: $main_color;
+            top: 0;
+            right: 0;
+            border-bottom-right-radius: 150px;
+        }
+        .bottom-circles{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+        .circles{
+            display: flex;
+            gap: .5rem;
+            .circle{
+                height: 120px;
+                width: 120px;
+                border-radius: 50%;
+            }
+            .light-yellow{
+                background: rgba(255, 205, 77, 0.63);
+            }
+            .deep-yellow{
+                background: yellow;
             }
         }
     }
@@ -44,3 +67,22 @@
 
 
 
+@media only screen and (max-width:768px){
+    .form-container{
+        display: block;
+        .glass_bg{
+           display: none;
+        }
+    }
+}
+@media only screen and (max-width:520px){
+    .form-container{
+        display: block;
+        .input-wrapper{
+            form{
+                width: 98%;
+                margin: 0 auto;
+            }
+        }
+    }
+}
