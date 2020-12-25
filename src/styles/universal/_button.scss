@@ -3,6 +3,7 @@
     outline: none;
     display: block;
     border-radius: 5px;
+    overflow: hidden;
     &:focus-within{
         outline:none;
     }
@@ -21,3 +22,5 @@
 .btn_shadow{
     box-shadow: 0 0 15px 1px rgba(15,14,255,0.14);
 }
+
+

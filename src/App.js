@@ -1,21 +1,18 @@
-import React from "react";
-import Button from "./components/containers/Button";
-import Input from "./components/containers/Input.";
-import Tooltip from "./components/containers/Tooltip";
+import React,{useState} from "react";
+import Login from "./pages/Login";
+import {BrowserRouter as Router, Switch} from 'react-router-dom'
+import Signup from "./pages/Signup";
+import PublicRoute from "./routes/PublicRoute";
 function App() {
   return (
     <>
-      <Button className="btn btn_shadow btn_small blue">Log in</Button>
-      <Input type="text" className="input" />
-          <Tooltip
-            text="Bernard Arhia"
-            color="#3736d4"
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-          />
-       
+    <Router>
+      <Switch>
+        <PublicRoute exact path="/login" component={Login} />
+        <PublicRoute exact path="/signup" component={Signup}/>
+      </Switch>
+    </Router>
     </>
   );
 }
-
 export default App;

@@ -1,0 +1,46 @@
+.form-container{
+    height: 100vh;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr minmax(300px, 1fr);
+    .input-wrapper{
+        height: 100%;
+        display: grid;
+        place-items: center;
+        border: 1px solid red;
+        form{
+            max-width: 500px;
+            padding: 2rem;
+       & > div{
+            margin: 2rem 0;
+            width: 100%;
+            input, button{
+                width: 100%;
+            }
+        }
+        }
+    }
+    .glass_bg{
+        height: 100%;
+        background: rgba(253, 253, 253, 0.15);
+        backdrop-filter: blur(400px);
+        position: relative;
+        display: grid;
+        place-items:center;
+
+        .img_bg{
+            p{
+                text-align: center;
+                font-size: 18px;
+                margin: 2.5rem 0;
+                color: $dark_text;
+                a{
+                    color: $main_color;
+                }
+            }
+        }
+    }
+}
+
+
+
