@@ -44,7 +44,7 @@ folder structure for the frontend
     Contains components that have logics behind it 
     III. SCREENS FOLDER
         Folder that holds the components for the various screens
-<br>
+<br />
 4.  **CONTEXT FOLDER**
     This is the **parent** folder that wraps all the contexts in the project
 
@@ -53,7 +53,7 @@ folder structure for the frontend
 
     II. PRESENTATIONAL FOLDER
     Contains the context for the states that will be shared across the various components
-<br>
+<br />
 5. **REDUCERS FOLDER**
     This is the **parent** folder for the reducers
 
@@ -63,7 +63,7 @@ folder structure for the frontend
     Contains the reducer functions for the project
     III. ACTIONS
     Contains actions that will be performed by the various states in the project
-<br>
+<br />
 6. **ROUTES FOLDER**
     This is the folder that contains both the private and public routes 
 <br>
@@ -82,8 +82,8 @@ folder structure for the frontend
     Contains styles for the containers components or the useless components
     VI. UTILITIES
     Contains variables for the styling 
-<br>
-8. **TEMPLATES FOLDER**
+<br/>
+8. ** TEMPLATES FOLDER **
     Contains folders for the templates we will be using
 <br>
 9. **UTILS FOLDER**
