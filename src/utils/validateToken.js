@@ -7,6 +7,13 @@ const Portfolio = localForage.createInstance({
 });
 
 const verifyToken = async ()=>{
-    return await Portfolio.getItem('token') || await Portfolio.setItem('token','jkgnejenjnikjn44545')
+    return await Portfolio.getItem('token') || await Portfolio.setItem('token','')
 }
-export { verifyToken, Portfolio}
+
+const setToken = async (token)=>{
+    await Portfolio.setItem('token',token)
+}
+const clearToken = async ()=>{
+    await Portfolio.setItem('token','')
+}
+export { verifyToken, setToken, clearToken}

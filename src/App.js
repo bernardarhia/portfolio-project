@@ -1,4 +1,4 @@
-import React,{useContext, useEffect} from "react";
+import React,{useContext} from "react";
 import Login from "./pages/Login";
 import {BrowserRouter as Router, Switch} from 'react-router-dom'
 import Signup from "./pages/Signup";
@@ -7,13 +7,11 @@ import Final from "./pages/Final";
 import {userContext} from "./context/userContext";
 import Home from "./pages/Home";
 import PrivateRoute from "./routes/PrivateRoute";
-import Dashboard from "./routes/Dashboard";
-import requests from './apis/requests';
-import {verifyToken, Portfolio} from './utils/validateToken'
-function App() {
-  const {user,setUser} = useContext(userContext);
 
-   
+import Dashboard from "./pages/Dashboard";
+import Account from "./pages/Account";
+function App() {
+  const {user} = useContext(userContext);
   return (
     <Router>
       <Switch>
@@ -22,6 +20,7 @@ function App() {
         <PublicRoute exact path="/signup" component={Signup}/>
         <PublicRoute exact path="/final" component={Final} />
         <PrivateRoute exact path="/dashboard" isAuthenticated={user.isAuth} component={Dashboard}  user={user}/>
+        <PrivateRoute exact path="/account" isAuthenticated={user.isAuth} component={Account}  user={user}/>
       </Switch>
     </Router>
   );

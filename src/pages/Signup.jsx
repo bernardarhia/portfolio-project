@@ -1,12 +1,16 @@
-import React from "react";
+import React,{useContext} from "react";
 import Button from "../components/containers/Button";
 import FormHeaderText from "../components/containers/FormHeaderText";
 import Input from "../components/containers/Input.";
 import FormScreen from "../components/screens/FormScreen";
-import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import {AiOutlineEye} from 'react-icons/ai'
+import {AiOutlineEye, AiOutlineEyeInvisible} from 'react-icons/ai'
+import { userContext } from "../context/userContext";
+import { actions } from "../reducers/actions/actions";
+import requests from "../apis/requests";
 const Signup = ({ path }) => {
+  const { state, setUser, setState } = useContext(userContext);
+
   const currentPage = path.replace("/", "");
 
   return (
@@ -32,8 +36,19 @@ const Signup = ({ path }) => {
           <Input className="input" type="text" placeholder="Email" />
         </div>
         <div className="password">
-          <Input className="input" type="password" placeholder="Password" />
-          <AiOutlineEye />
+        <Input
+            className="input"
+            type={`${state.show ?'text':'password'}`}
+            placeholder="Password"
+           
+          />
+          <div
+            onClick={() => {
+              setState({ type: actions.SHOW });
+            }}
+          >
+            {state.show ? <AiOutlineEyeInvisible />:<AiOutlineEye />}
+            </div>
         </div>
         <div className="recovery" style={{display:'flex',justifyContent:'space-between'}}>
           <div className="terms_checked">

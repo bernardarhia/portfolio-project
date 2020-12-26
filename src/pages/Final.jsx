@@ -1,8 +1,8 @@
-import { motion } from "framer-motion";
 import React from "react";
 import Button from "../components/containers/Button";
+import CountryList from "../components/containers/CountryList";
 import FormHeaderText from "../components/containers/FormHeaderText";
-import Input from "../components/containers/Input.";
+import WorkList from "../components/containers/WorkList";
 import FormScreen from "../components/screens/FormScreen";
 import { countryList } from "../contents/countries";
 import { workList } from "../contents/work";
@@ -11,28 +11,10 @@ const Final = () => {
     <FormScreen>
       <form>
         <FormHeaderText className="">
-          <h1>You're Almost Done</h1>
+          <h1>You're Almost Done <span>🥳</span></h1>
         </FormHeaderText>
-        <div className="select">
-          <select className="input">
-            <option>Select a country</option>
-            {countryList.map((country, index) => (
-              <option value={country} key={index}>
-                {country}
-              </option>
-            ))}
-          </select>
-        </div>
-        <div className="select">
-          <select className="input">
-            <option>Select a country</option>
-            {workList.map((work, index) => (
-              <option value={work} key={index}>
-                {work}
-              </option>
-            ))}
-          </select>
-        </div>
+        <CountryList countryList={countryList} />
+       <WorkList workList={workList} />
         <div className="submit_btn">
           <Button
             className="btn"

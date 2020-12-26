@@ -36,6 +36,9 @@ button {
   margin-bottom: 3rem;
   text-align: center;
 }
+.form-header span {
+  font-size: 2rem;
+}
 
 .password {
   position: relative;
@@ -47,6 +50,13 @@ button {
   right: 10%;
   top: 50%;
   transform: translate(-10%, -50%);
+}
+
+.error {
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: red;
 }
 
 .form-container {

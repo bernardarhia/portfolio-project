@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import guy from "../../assets/img/guy.png";
-import background from "../../assets/img/right-corner.png";
 const FormScreen = ({ children, pageType }) => {
   var text;
   switch (pageType) {
