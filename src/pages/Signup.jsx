@@ -5,6 +5,7 @@ import Input from "../components/containers/Input.";
 import FormScreen from "../components/screens/FormScreen";
 import { motion } from "framer-motion";
 
+
 const Signup = ({ path }) => {
   const currentPage = path.replace("/", "");
 
@@ -12,8 +13,8 @@ const Signup = ({ path }) => {
     <FormScreen pageType={currentPage}>
       <motion.form
         className="form"
-        animate={{ x: 0, scale: 1 }}
-        initial={{ x: "-100vw", scale: 0 }}
+        initial={{ x: "-100vw", scale: 0, opacity:0 }}
+        animate={{ x: 0, scale: 1, opacity:1 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
         <FormHeaderText className="">

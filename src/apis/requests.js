@@ -1,6 +1,6 @@
 import axios from "axios";
 
-axios.defaults.baseURL = "https://axios-app.firebaseio.com";
+axios.defaults.baseURL = "https://paperbag.herokuapp.com/api/users";
 const requests = {
   async verify(url, token) {
     return await axios.post(url, null, {
@@ -16,6 +16,9 @@ const requests = {
   async logout(url, data) {
     return axios.post(url, data);
   },
+  async users(url){
+    return await axios.get(url)
+  }
 };
 
 export default requests;

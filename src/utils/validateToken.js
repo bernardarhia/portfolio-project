@@ -6,4 +6,7 @@ const Portfolio = localForage.createInstance({
     description : 'This is the default offline database for the users'
 });
 
-export {Portfolio}
+const verifyToken = async ()=>{
+    return await Portfolio.getItem('token') || await Portfolio.setItem('token','jkgnejenjnikjn44545')
+}
+export { verifyToken, Portfolio}
