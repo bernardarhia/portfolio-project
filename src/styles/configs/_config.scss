@@ -19,7 +19,9 @@ body,html{
 label{
     display: block;
 }
-
+button{
+    cursor: pointer;
+}
 .container{
     max-width: 1200px;
     margin: 2rem auto;
@@ -30,4 +32,19 @@ label{
     font-size: 25px;
     color: $dark_text;
     margin-bottom: 3rem;
+    text-align: center;
+}
+
+
+.password{
+    position: relative;
+    svg{
+        color: $dark_text;
+        font-size: 1.4rem;
+        position: absolute;
+        right: 10%;
+        top: 50%;
+        transform:translate(-10%, -50%)
+        
+    }
 }
