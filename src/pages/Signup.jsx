@@ -11,10 +11,7 @@ const Signup = ({ path }) => {
 
   return (
     <FormScreen pageType={currentPage}>
-      <motion.form
-        initial={{ x: "-100vw", scale: 0, opacity: 0 }}
-        animate={{ x: 0, scale: 1, opacity: 1 }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
+      <form
       >
         <FormHeaderText className="">
           <h1>Create Account</h1>
@@ -53,7 +50,7 @@ const Signup = ({ path }) => {
         <div className="submit_btn">
           <Button className="btn btn_small blue">Sign up</Button>
         </div>
-      </motion.form>
+      </form>
     </FormScreen>
   );
 };
