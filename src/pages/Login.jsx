@@ -5,7 +5,7 @@ import Input from "../components/containers/Input.";
 import FormScreen from "../components/screens/FormScreen";
 import { Link, useHistory } from "react-router-dom";
 import Loader from "../components/containers/Loader";
-import { AiOutlineEye,AiOutlineEyeInvisible } from "react-icons/ai";
+import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { userContext } from "../context/userContext";
 import { actions } from "../reducers/actions/actions";
 import requests from "../apis/requests";
@@ -25,7 +25,7 @@ const Login = ({ path, location: { state: urlState } }) => {
     setState({ type: actions.IS_LOADING });
     try {
       const loginUser = await requests.login("/login", userData);
-      if (loginUser) {
+      if (loginUser.data) {
         setUser({ type: actions.hasToken, user: loginUser.data.user });
         setState({ type: actions.SUCCESS });
         setToken(loginUser.data.token);
@@ -68,7 +68,7 @@ const Login = ({ path, location: { state: urlState } }) => {
         <div className="password">
           <Input
             className="input"
-            type={`${state.show ?'text':'password'}`}
+            type={`${state.show ? "text" : "password"}`}
             placeholder="Password"
             value={userData.password}
             onChange={handlePassword}
@@ -78,7 +78,7 @@ const Login = ({ path, location: { state: urlState } }) => {
               setState({ type: actions.SHOW });
             }}
           >
-            {state.show ? <AiOutlineEyeInvisible />:<AiOutlineEye />}
+            {state.show ? <AiOutlineEyeInvisible /> : <AiOutlineEye />}
           </div>
         </div>
         <div className="submit_btn">

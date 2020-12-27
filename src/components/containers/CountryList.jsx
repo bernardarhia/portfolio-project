@@ -1,13 +1,13 @@
 import React from 'react'
 import Country from './Country'
 
-const CountryList = ({countryList}) => {
+const CountryList = ({countryList, ...rest}) => {
     return (
         <div className="select">
-          <select className="input">
-            <option>Select a country</option>
+          <select className="input" {...rest}>
+            <option disabled>Select a country</option>
             {countryList.map((country, index) => (
-             <Country country={country} key={index} />
+             <Country country={country} key={index}/>
             ))}
           </select>
         </div>

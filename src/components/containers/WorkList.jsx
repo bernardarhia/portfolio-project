@@ -1,11 +1,11 @@
 import React from 'react'
 import Country from './Country'
 
-const WorkList = ({workList}) => {
+const WorkList = ({workList, ...rest}) => {
     return (
         <div className="select">
-          <select className="input">
-            <option>What do you do</option>
+          <select className="input" {...rest}>
+            <option disabled>What do you do</option>
             {workList.map((work, index) => (
              <Country country={work} key={index} />
             ))}
