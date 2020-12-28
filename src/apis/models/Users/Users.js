@@ -83,14 +83,10 @@ const User = new mongoose.Schema(
       trim: true,
     },
     
-    userContactAccounts: [
-        {
-        type: mongoose.Schema.Types.ObjectId,
-        ref:"userContactInfo"
-
-        }
-      
-    ],
+    uniqueUsername: {
+        type: String,
+        required: true,
+    },
     userTokens: [
         {
           token: {
