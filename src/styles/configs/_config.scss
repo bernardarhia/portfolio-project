@@ -6,11 +6,12 @@
     list-style: none;
     text-decoration: none;
     font-family: Maven Pro;
-    position: relative;
+    @include scrollbar;
 }
 
 body,html{
     height: 100%;
+    overflow: hidden;
 }
 
 #root{
@@ -63,4 +64,8 @@ button{
 
 .btn_preview{
     padding: .5rem;
+}
+
+.active_tab{
+    color: #333 !important;
 }

@@ -1,0 +1,22 @@
+.toolbar-container{
+    position: fixed;
+    right: 0;
+    height: 100%;
+    width:250px;
+    box-shadow: 0 0 10px rgba(182,198, 255, 0.25);
+    padding-bottom: 5rem;
+    overflow-y: scroll;
+    .toolbar-header{
+        font-size: 12px;
+        font-weight: 600;
+        @extend %flex-sb;
+        padding: 1rem;
+        span{
+            display: block;
+            color: $light_text;
+            cursor: pointer;
+        }
+    }
+}
+
+

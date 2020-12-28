@@ -7,7 +7,7 @@
 // screens
 @import './screens/formscreen';
 // pages
-
+@import './pages/editor';
 // universal
 @import './universal/button';
 @import './universal/input';
@@ -15,4 +15,8 @@
 @import './universal/tooltip';
 @import './universal/header';
 
+
+// components
+@import './components/toolbar';
+@import './components/_socialtoolbar'
 // templates

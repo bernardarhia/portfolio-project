@@ -6,33 +6,12 @@ import { verifyToken } from "../utils/validateToken";
 import Header from "../components/containers/Header";
 import Avatar from "../components/containers/Avatar";
 import Tooltip from "../components/containers/Tooltip";
-const Home = ({ location: { state: urlState } }) => {
+const Home = ({ location: { state: urlState }}) => {
   const redirectTo = useHistory();
   const { user, setUser } = useContext(userContext);
   const [showTooltip, setShowTooltip] = useState(false);
   const [tooltipPosition, setShowTooltipPosition] = useState({x:0,y:0})
-  useEffect(() => {
-    const verify = async () => {
-      const token = await verifyToken();
-      try {
-        const userIsLoggedIn = await requests.verify("/has_token", token);
-        if (userIsLoggedIn.data) {
-          const user = await requests.me("/me", token);
-          setUser({ type: "hasToken", user: user.data });
-          if (urlState) {
-            redirectTo.push(urlState.from.pathname);
-          } else {
-            redirectTo.push("/dashboard");
-          }
-        }
-      } catch (error) {
-        if (error.response) {
-          console.log(error);
-        }
-      }
-    };
-    verify();
-  }, [redirectTo, setUser, urlState]);
+ 
   return (
     <>
       <Header>

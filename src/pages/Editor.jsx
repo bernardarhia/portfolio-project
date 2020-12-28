@@ -2,8 +2,10 @@ import React from "react";
 import Avatar from "../components/containers/Avatar";
 import Button from "../components/containers/Button";
 import Header from "../components/containers/Header";
+import Toolbar from "../components/presentational/Toolbar";
 
-const Edit = () => {
+const Editor = () => {
+ 
   return (
     <div className="editor_page">
       <Header>
@@ -19,8 +21,18 @@ const Edit = () => {
           Preview
         </Button>
       </Header>
+      <div className="editor-wrapper">
+        <div className="editor-container">
+          <div className="editor">
+          Editor
+          </div>
+        </div>
+        <Toolbar>
+         
+        </Toolbar>
+      </div>
     </div>
   );
 };
 
-export default Edit;
+export default Editor;

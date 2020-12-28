@@ -1,0 +1,14 @@
+.editor_page{
+            min-height: 100vh;
+    .editor-wrapper{
+            display: grid;
+            grid-template-columns: 1fr 250px;
+        .editor-container{
+            // border: 1px solid green;
+            min-height: 100vh;
+           .editor{
+            min-height: 100vh;
+           }
+        }
+    }
+}

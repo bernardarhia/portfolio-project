@@ -8,34 +8,20 @@ import { countryList } from "../contents/countries";
 import { workList } from "../contents/work";
 import { useHistory } from "react-router-dom";
 const Final = ({ location }) => {
-  const redirectTo = useHistory();
-  console.log(location);
-  if (!location.state) {
-    redirectTo.push("/signup");
-    return;
-  }
-
-  const handleWork = (e) => {
-    location.state.work = e.target.value;
-  };
-  const handleCountry = (e) => {
-    location.state.work = e.target.value;
-  };
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
+  
+  
 
   return (
     <FormScreen>
-      <form onSubmit={handleSubmit}>
+      <form >
         <FormHeaderText className="">
           <h1>
             You're Almost Done <span>🥳</span>
           </h1>
         </FormHeaderText>
-        <CountryList countryList={countryList} onChange={handleCountry} />
-        <WorkList workList={workList} onChange={handleWork} />
-        {location.state.work && location.state.country && (
+        <CountryList countryList={countryList}  />
+        <WorkList workList={workList} />
+       
           <div className="submit_btn">
             <Button
               className="btn"
@@ -51,7 +37,6 @@ const Final = ({ location }) => {
               Start Creating
             </Button>
           </div>
-        )}
       </form>
     </FormScreen>
   );

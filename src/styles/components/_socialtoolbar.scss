@@ -1,0 +1,22 @@
+.social-toolbar{
+    width: 100%;
+    padding: 1rem;
+    .social{
+        height: 100%;
+        width: 100%;
+        display: grid;
+        place-items: center;
+        margin: 0 auto;
+        .input-with__label{
+            width:100%;
+            margin: 1rem 0;
+            label{
+                display: block;
+                font-size: 12px;
+                font-weight: 600;
+                color: #5a5a5a;
+                margin: .5rem 0;
+            }
+        }
+    }
+}
