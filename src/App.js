@@ -11,6 +11,8 @@ import Dashboard from "./pages/Dashboard";
 import Account from "./pages/Account";
 import Editor from "./pages/Editor";
 import ToolbarContext from "./context/toolbarContext";
+import NotFound from "./pages/NotFound";
+// dotenv.config()
 function App() {
   const {user} = useContext(userContext);
   return (
@@ -22,10 +24,8 @@ function App() {
         <PublicRoute exact path="/final" component={Final} />
         <PrivateRoute exact path="/dashboard" isAuthenticated={user.isAuth} component={Dashboard}  user={user}/>
         <PrivateRoute exact path="/account" isAuthenticated={user.isAuth} component={Account}  user={user}/>
-        <ToolbarContext>
         <PublicRoute exact path="/editor" isAuthenticated={user.isAuth} component={Editor}  user={user}/>
-        </ToolbarContext>
-        <PublicRoute exact  component={()=><><h1>NOT FOUND</h1><Link to="/">Go Home</Link> </>} />
+        <PublicRoute exact component={NotFound}/>
       </Switch>
     </Router>
   );

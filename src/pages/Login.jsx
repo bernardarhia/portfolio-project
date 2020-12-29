@@ -24,18 +24,7 @@ const Login = ({ path, location: { state: urlState } }) => {
     e.preventDefault();
     setState({ type: actions.IS_LOADING });
     try {
-      const loginUser = await requests.login("/login", userData);
-      if (loginUser.data) {
-        setUser({ type: actions.hasToken, user: loginUser.data.user });
-        setState({ type: actions.SUCCESS });
-        setToken(loginUser.data.token);
-        setTimeout(() => {
-          if (urlState) {
-            redirectTo.push(urlState.from.pathname);
-          }
-          redirectTo.push("/dashboard");
-        }, 1400);
-      }
+    //  log in user
     } catch (error) {
       setState({ type: actions.ERROR, error: error.response.data });
     }

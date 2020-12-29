@@ -7,6 +7,7 @@ import FormScreen from "../components/screens/FormScreen";
 import { countryList } from "../contents/countries";
 import { workList } from "../contents/work";
 import { useHistory } from "react-router-dom";
+import Input from "../components/containers/Input.";
 const Final = ({ location }) => {
   
   
@@ -21,7 +22,10 @@ const Final = ({ location }) => {
         </FormHeaderText>
         <CountryList countryList={countryList}  />
         <WorkList workList={workList} />
-       
+        <div className="unique_input">
+          <div className="site-name input" disabled aria-readonly>Portfolio.com/</div>
+          <Input type="text" placeholder="Unique username" className="input"/>
+        </div>
           <div className="submit_btn">
             <Button
               className="btn"
