@@ -1,6 +1,6 @@
 import React,{useContext} from "react";
 import Login from "./pages/Login";
-import {BrowserRouter as Router, Link, Switch} from 'react-router-dom'
+import {BrowserRouter as Router, Switch} from 'react-router-dom'
 import Signup from "./pages/Signup";
 import PublicRoute from "./routes/PublicRoute";
 import Final from "./pages/Final";
@@ -10,7 +10,6 @@ import PrivateRoute from "./routes/PrivateRoute";
 import Dashboard from "./pages/Dashboard";
 import Account from "./pages/Account";
 import Editor from "./pages/Editor";
-import ToolbarContext from "./context/toolbarContext";
 import NotFound from "./pages/NotFound";
 // dotenv.config()
 function App() {

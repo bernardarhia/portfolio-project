@@ -10,7 +10,6 @@ const NotFound = (props) => {
                 <div className="big-text">4<span>0</span>4</div>
                 <div className="redirect">
                     <Link to="/">Go home</Link>
-                  
                 </div>
             </div>
         </div>

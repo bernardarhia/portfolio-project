@@ -8,7 +8,6 @@ const Toolbar = ({ children }) => {
     style: false,
     social: false,
   });
-  const [font, setFont] = useState("Open sans");
   const handleOpen = (e) => {
     const text = e.target.textContent.toLowerCase();
     if (text === "social") {
@@ -40,20 +39,14 @@ const Toolbar = ({ children }) => {
           </span>
         </div>
       </div>
+
+      <div className="tools">
       {showStyle.style && (
-        <FontPicker
-          apiKey={process.env.REACT_APP_FONT_APIKEY}
-          activeFontFamily={font}
-          onChange={(nextFont) => {
-            setFont(nextFont.family)
-          }}
-          limit={500}
-        />
+        children
       )}
+      </div>
 
       {showStyle.social && <SocialToolbar />}
-      {children}
-      <div className="apply-font">Hello world</div>
     </div>
   );
 };
