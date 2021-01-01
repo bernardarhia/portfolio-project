@@ -18,12 +18,12 @@ function App() {
     <Router>
       <Switch>
         <PublicRoute exact path="/" component={Home} />
-        <PublicRoute exact path="/login" component={Login} />
-        <PublicRoute exact path="/signup" component={Signup}/>
-        <PublicRoute exact path="/final" component={Final} />
+        <PrivateRoute exact path="/login" component={Login} />
+        <PrivateRoute exact path="/signup" component={Signup}/>
+        <PrivateRoute exact path="/final" component={Final} />
         <PrivateRoute exact path="/dashboard" isAuthenticated={user.isAuth} component={Dashboard}  user={user}/>
         <PrivateRoute exact path="/account" isAuthenticated={user.isAuth} component={Account}  user={user}/>
-        <PublicRoute exact path="/editor" isAuthenticated={user.isAuth} component={Editor}  user={user}/>
+        <PrivateRoute exact path="/editor" isAuthenticated={user.isAuth} component={Editor}  user={user}/>
         <PublicRoute exact component={NotFound}/>
       </Switch>
     </Router>

@@ -4,6 +4,7 @@ import App from './App';
 import ToolbarContext from './context/toolbarContext';
 import UserContext from './context/userContext';
 import './styles/style.css';
+import './styles/queries.css';
 const container = document.getElementById('root')
 ReactDOM.render(
   <React.StrictMode>

@@ -1,46 +1,51 @@
-import React, { useContext, useEffect, useState } from "react";
-import { userContext } from "../context/userContext";
-import { Link, useHistory } from "react-router-dom";
-import requests from "../apis/requests";
-import { verifyToken } from "../utils/validateToken";
-import Header from "../components/containers/Header";
-import Avatar from "../components/containers/Avatar";
-import Tooltip from "../components/containers/Tooltip";
-const Home = ({ location: { state: urlState }}) => {
-  const redirectTo = useHistory();
-  const { user, setUser } = useContext(userContext);
-  const [showTooltip, setShowTooltip] = useState(false);
-  const [tooltipPosition, setShowTooltipPosition] = useState({x:0,y:0})
- 
+import React from 'react'
+import topLeft from '../assets/img/top-left.svg';
+import bottomRight from '../assets/img/bottom-right.svg';
+import bottomLeft from '../assets/img/botom-left.svg';
+import circles from '../assets/img/circles.svg';
+import curved from '../assets/img/curved.svg';
+import circle from '../assets/img/circle.svg';
+import Input from '../components/containers/Input.';
+import Button from '../components/containers/Button';
+const Home = () => {
   return (
-    <>
-      <Header>
-        <Avatar
-          initials="AB"
-          onHoverStart={(e) => {
-            setShowTooltip(true)
-            setShowTooltipPosition({...tooltipPosition, x:e.x,y:e.y})
-          }}
-          onHoverEnd={() => {
-            setShowTooltip(false)
-            setShowTooltipPosition({...tooltipPosition, x:0,y:0})
-          }}
-        />
-        <Tooltip
-          show={showTooltip}
-          text="Bernard Arhia"
-          initial={{ scale: 0, y:50 }}
-          animate={{ scale: 1}}
-          position={tooltipPosition}
-        />
-      </Header>
-      {!user.isAuth && (
-        <div>
-          <Link to="/login">Login</Link>
-        </div>
-      )}
-    </>
-  );
-};
+    <div className="alert_container">
+    <div className="layers">
+    <div className="top-left__layer">
+       <img src={topLeft} alt=""/>
+     </div>
+     <div className="bottom-right__layer">
+       <img src={bottomRight} alt=""/>
+     </div>
+     <div className="bottom-left__layer">
+       <img src={bottomLeft} alt=""/>
+     </div>
+     <div className="circles">
+       <img src={circles} alt=""/>
+     </div>
+    </div>
+   <div className="form">
+     <div className="logo"><h1>Port<span>L</span>inks</h1></div>
+     <div className="big_text">
+       <h1>Why create a portfolio website from  scratch if we've got you covered?</h1>
+     </div>
+     <div className="small_text">
+       <p>Be one of the first 100 to try it out</p>
+     </div>
+    <form action="">
+      <Input type="text" placeholder="Your email" />
+      <Button>Get notified</Button>
+    </form>
+<div className="curved">
+  <img src={curved} alt=""/>
+</div>
+<div className="circle">
+  <img src={circle} alt=""/>
+</div>
+   </div>
+    <div className="date"><span style={{display:"inline-block",marginRight:'.5rem'}}>&copy;</span>{new Date().getFullYear()}</div>
+    </div>
+  )
+}
 
-export default Home;
+export default Home
