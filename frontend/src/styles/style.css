@@ -224,6 +224,121 @@ button {
   font-size: 1.2rem;
 }
 
+.alert_container {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #4228E4;
+  display: grid;
+  place-items: center;
+  color: #eeeeee;
+  text-align: center;
+}
+.alert_container .top-left__layer {
+  position: fixed;
+  top: -50px;
+  left: -100px;
+  width: 300px;
+}
+.alert_container .top-left__layer img {
+  width: 100%;
+}
+.alert_container .bottom-right__layer {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  width: 300px;
+}
+.alert_container .bottom-right__layer img {
+  width: 100%;
+}
+.alert_container .bottom-left__layer {
+  position: fixed;
+  bottom: 20px;
+  left: 50px;
+  width: 50px;
+}
+.alert_container .bottom-left__layer img {
+  width: 100%;
+}
+.alert_container .circles {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 150px;
+}
+.alert_container .circles img {
+  width: 100%;
+}
+.alert_container .form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 1040px;
+  padding: 4rem 2rem;
+}
+.alert_container .form .logo span {
+  color: #0A0B2E;
+}
+.alert_container .form .big_text {
+  margin: 1.5em auto;
+}
+.alert_container .form .big_text h1 {
+  line-height: 1.5;
+}
+.alert_container .form .small_text {
+  margin-bottom: 1.5rem;
+}
+.alert_container .form form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.alert_container .form form input {
+  padding: 1.2rem;
+  font-size: 1rem;
+  flex: 1;
+  border: none;
+  border-radius: 5px;
+}
+.alert_container .form form button {
+  margin-left: 1rem;
+  padding: 1.2rem;
+  font-size: 1rem;
+  background: #725DFA;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 5px;
+}
+.alert_container .form .curved {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+}
+.alert_container .form .curved img {
+  width: 100%;
+}
+.alert_container .form .circle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+}
+.alert_container .form .circle img {
+  width: 100%;
+}
+.alert_container .date {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  font-size: 1.2rem;
+}
+
 .btn {
   border: none;
   outline: none;
