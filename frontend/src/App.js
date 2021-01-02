@@ -1,7 +1,7 @@
 import React,{useContext} from "react";
 import Login from "./pages/Login";
 import {BrowserRouter as Router, Switch} from 'react-router-dom'
-import Signup from "./pages/Signup";
+// import Signup from "./pages/Signup";
 import PublicRoute from "./routes/PublicRoute";
 import Final from "./pages/Final";
 import {userContext} from "./context/userContext";
@@ -19,7 +19,7 @@ function App() {
       <Switch>
         <PublicRoute exact path="/" component={Home} />
         <PrivateRoute exact path="/login" component={Login} />
-        <PrivateRoute exact path="/signup" component={Signup}/>
+        {/* <PrivateRoute exact path="/signup" component={Signup}/> */}
         <PrivateRoute exact path="/final" component={Final} />
         <PrivateRoute exact path="/dashboard" isAuthenticated={user.isAuth} component={Dashboard}  user={user}/>
         <PrivateRoute exact path="/account" isAuthenticated={user.isAuth} component={Account}  user={user}/>
