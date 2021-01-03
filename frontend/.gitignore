@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+frontend/node_modules
 /.pnp
 .pnp.js
 .scss
@@ -12,7 +13,6 @@
 
 # production
 /build
-../.vscode
 # misc
 .DS_Store
 .env.local
