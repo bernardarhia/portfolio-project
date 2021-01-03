@@ -1,0 +1,27 @@
+.btn{
+    border: none;
+    outline: none;
+    display: grid;
+    place-items: center;
+    border-radius: 5px;
+    overflow: hidden;
+    &:focus-within{
+        outline:none;
+    }
+    margin: 1rem 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.btn_small{
+    padding: 1rem 2.5rem;
+}
+.blue{
+    background: $main_color;
+    color: #fff;
+}
+.btn_shadow{
+    box-shadow: 0 0 15px 1px rgba(15,14,255,0.14);
+}
+
+

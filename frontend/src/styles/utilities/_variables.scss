@@ -1,0 +1,29 @@
+$main_color :#5352ED;
+$dark_text:#333;
+$light_text:#A3A1A1;
+$input_bg:rgba(237,240,249,0.25);
+$input_shadow:inset 0 0 3px rgba(0,0,0, 0.02);
+$glass:rgba(255,255,255,0.09);
+$nav-height:75px;
+
+
+
+%flex-sb{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+@mixin scrollbar{
+    /* width */
+::-webkit-scrollbar {
+    width :0;
+    opacity: 0;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px yellow;
+    border-radius: 10px;
+    display: none;
+  }
+}

@@ -1,0 +1,11 @@
+.unique_input{
+    @extend %flex-sb;
+    .site-name{
+        user-select: none;
+        height: 100%;
+        padding: 1rem;
+        background: #cccccc1c;
+        font-weight: bold;
+        color: #a9a9a9;
+    }
+}

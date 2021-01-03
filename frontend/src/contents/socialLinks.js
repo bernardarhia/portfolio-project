@@ -1,0 +1,1 @@
+export const socialLinks = ['Github','Twitter','Linkedin','Facebook','Instagram','Pinterest','Blog','Email']
