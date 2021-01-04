@@ -20,6 +20,10 @@
 
     .tools{
         padding:2rem;
+        border: 1px solid red;
+        overflow:hidden;
+        margin: 0 auto;
+        
         .colors{
             input[type="color"]{
                 margin: 1rem 0;
@@ -35,7 +39,6 @@
 
        .texts{
         & > div {
-            margin: .3rem 0;
             font-size: 13px;
             font-weight: bold;
         }
@@ -66,16 +69,12 @@
        }
        .letter-spacing, .word-spacing,.line-height{
            @extend %flex-sb;
-        
+           margin:0;
            .inputs{
-              width: 200px;
-              margin: 0 auto;
                @extend %flex-sb;
-               border: 1px solid red;
-               input[type="number"]{
-                appearance: none;
+               input{
+                   margin-top: 0;
                 margin-right: .5rem;
-                // width: 80px;
                 margin-left: 1rem;
                }
                button{
@@ -102,6 +101,7 @@
        }
        .text-transform{
            @extend %flex-sb;
+           margin: 1rem 0 !important;
            select{
                appearance: none;
                border: none;

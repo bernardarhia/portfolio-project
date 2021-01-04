@@ -404,6 +404,9 @@ button {
 }
 .toolbar-container .tools {
   padding: 2rem;
+  border: 1px solid red;
+  overflow: hidden;
+  margin: 0 auto;
 }
 .toolbar-container .tools .colors input[type=color] {
   margin: 1rem 0;
@@ -414,7 +417,6 @@ button {
   color: #474747;
 }
 .toolbar-container .tools .texts > div {
-  margin: 0.3rem 0;
   font-size: 13px;
   font-weight: bold;
 }
@@ -433,13 +435,11 @@ button {
   appearance: none;
   border: none;
 }
-.toolbar-container .tools .letter-spacing .inputs, .toolbar-container .tools .word-spacing .inputs, .toolbar-container .tools .line-height .inputs {
-  width: 200px;
-  margin: 0 auto;
-  border: 1px solid red;
+.toolbar-container .tools .letter-spacing, .toolbar-container .tools .word-spacing, .toolbar-container .tools .line-height {
+  margin: 0;
 }
-.toolbar-container .tools .letter-spacing .inputs input[type=number], .toolbar-container .tools .word-spacing .inputs input[type=number], .toolbar-container .tools .line-height .inputs input[type=number] {
-  appearance: none;
+.toolbar-container .tools .letter-spacing .inputs input, .toolbar-container .tools .word-spacing .inputs input, .toolbar-container .tools .line-height .inputs input {
+  margin-top: 0;
   margin-right: 0.5rem;
   margin-left: 1rem;
 }
@@ -458,6 +458,9 @@ button {
 }
 .toolbar-container .tools .text-align input {
   margin-left: 1rem;
+}
+.toolbar-container .tools .text-transform {
+  margin: 1rem 0 !important;
 }
 .toolbar-container .tools .text-transform select {
   appearance: none;

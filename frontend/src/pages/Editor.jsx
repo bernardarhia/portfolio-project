@@ -66,7 +66,7 @@ const Editor = () => {
                 </select>
               </div>
               <div className="letter-spacing">
-                <p>Letter</p>
+                <p>Lett</p>
                 <div className="inputs">
                   <Input type="number" className="input_small"  />
                   <Button className="btn">-</Button>
@@ -74,7 +74,7 @@ const Editor = () => {
                 </div>
               </div>
               <div className="word-spacing">
-                <p>Word</p>
+                <p>wrd</p>
                 <div className="inputs">
                   <Input type="number" className="input_small"  />
                   <Button className="btn">-</Button>
@@ -90,12 +90,11 @@ const Editor = () => {
                 </div>
               </div>
               <div className="text-align">
-                <p>Align</p>
+                <p>Alig</p>
                 <Input className="input_small" />
               </div>
-
               <div className="text-transform">
-                <p>Transform</p>
+                <p>Transf</p>
                 <select className="input_small">
                   <option value="">none</option>
                   <option value="">uppercase</option>
@@ -103,7 +102,7 @@ const Editor = () => {
                 </select>
               </div>
               <div className="text-decoration">
-                <p>Decoration</p>
+                <p>Decors</p>
                 <div className="none">
                   <label htmlFor=""></label>
                 <Input type="radio" />
