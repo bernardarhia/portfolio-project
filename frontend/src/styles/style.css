@@ -1,4 +1,4 @@
-.toolbar-container .tools .text-decoration, .toolbar-container .tools .text-transform, .toolbar-container .tools .text-align, .toolbar-container .tools .letter-spacing .inputs, .toolbar-container .tools .word-spacing .inputs, .toolbar-container .tools .line-height .inputs, .toolbar-container .tools .letter-spacing, .toolbar-container .tools .word-spacing, .toolbar-container .tools .line-height, .toolbar-container .tools .font-weight, .toolbar-container .tools .texts .font-family, .toolbar-container .toolbar-header, .error-page .content .redirect, .unique_input {
+.toolbar-container .tools .others .rotate, .toolbar-container .tools .texts .text-decoration, .toolbar-container .tools .texts .text-align, .toolbar-container .tools .texts .letter-spacing .inputs, .toolbar-container .tools .texts .word-spacing .inputs, .toolbar-container .tools .texts .line-height .inputs, .toolbar-container .tools .texts .letter-spacing, .toolbar-container .tools .texts .word-spacing, .toolbar-container .tools .texts .line-height, .toolbar-container .tools .texts .font-size, .toolbar-container .tools .texts .rotate, .toolbar-container .tools .texts .font-weight, .toolbar-container .tools .texts .text-transform, .toolbar-container .tools .texts .font-family, .toolbar-container .tools .colors .color, .toolbar-container .tools .colors .opacity, .toolbar-container .tools .layouts .padding .mini-wheels, .toolbar-container .tools .layouts .radius .mini-wheels, .toolbar-container .tools .layouts .padding .wheels .inputs, .toolbar-container .tools .layouts .radius .wheels .inputs, .toolbar-container .tools .layouts .padding .wheels, .toolbar-container .tools .layouts .radius .wheels, .toolbar-container .tools .layouts .width, .toolbar-container .tools .layouts .height, .toolbar-container .toolbar-header, .error-page .content .redirect, .unique_input {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -301,8 +301,8 @@ button {
   -webkit-appearance: none;
   /* Override default look */
   appearance: none;
-  width: 23px;
-  height: 23px;
+  width: 15px;
+  height: 15px;
   background: #fff;
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
@@ -316,6 +316,10 @@ button {
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   cursor: pointer;
+}
+
+input {
+  border: none;
 }
 
 .loader {
@@ -403,21 +407,74 @@ button {
   cursor: pointer;
 }
 .toolbar-container .tools {
-  padding: 2rem;
-  border: 1px solid red;
+  padding: 1.5rem;
   overflow: hidden;
-  margin: 0 auto;
+}
+.toolbar-container .tools .layouts .width, .toolbar-container .tools .layouts .height {
+  font-size: 12px;
+  font-weight: 600;
+  margin: 1.2rem 0;
+}
+.toolbar-container .tools .layouts .width input, .toolbar-container .tools .layouts .height input {
+  width: 133px;
+}
+.toolbar-container .tools .layouts .padding, .toolbar-container .tools .layouts .radius {
+  font-size: 12px;
+  font-weight: 600;
+}
+.toolbar-container .tools .layouts .padding .wheels .inputs, .toolbar-container .tools .layouts .radius .wheels .inputs {
+  width: 133px;
+}
+.toolbar-container .tools .layouts .padding .wheels .inputs input, .toolbar-container .tools .layouts .radius .wheels .inputs input {
+  background: #f3f3f3;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+.toolbar-container .tools .layouts .padding .wheels .inputs input:nth-child(1), .toolbar-container .tools .layouts .radius .wheels .inputs input:nth-child(1) {
+  width: 85px;
+}
+.toolbar-container .tools .layouts .padding .wheels .inputs input:nth-child(2), .toolbar-container .tools .layouts .radius .wheels .inputs input:nth-child(2) {
+  width: 40px;
+}
+.toolbar-container .tools .layouts .padding .mini-wheels, .toolbar-container .tools .layouts .radius .mini-wheels {
+  width: 133px;
+  margin: 1rem 0 1rem auto;
+}
+.toolbar-container .tools .layouts .padding .mini-wheels input, .toolbar-container .tools .layouts .radius .mini-wheels input {
+  background: #f3f3f3;
+  width: 30px;
+  font-size: 14px;
+}
+.toolbar-container .tools .colors {
+  margin: 2rem 0;
 }
 .toolbar-container .tools .colors input[type=color] {
   margin: 1rem 0;
 }
-.toolbar-container .tools .colors .head, .toolbar-container .tools .texts .head {
-  font-size: 15px;
+.toolbar-container .tools .colors .opacity {
+  font-size: 12px;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+.toolbar-container .tools .colors .opacity p {
+  margin-right: 0.5rem;
+}
+.toolbar-container .tools .colors .color {
+  font-size: 12px;
+  font-weight: 600;
+}
+.toolbar-container .tools .colors .color input[type=number] {
+  background: #f3f3f3;
+  width: 50px;
+  padding: 0.17rem;
+}
+.toolbar-container .tools .colors .head, .toolbar-container .tools .texts .head, .toolbar-container .tools .others .head, .toolbar-container .tools .layouts .head {
+  font-size: 16px;
   font-weight: 600;
   color: #474747;
 }
 .toolbar-container .tools .texts > div {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: bold;
 }
 .toolbar-container .tools .texts .font-family p:nth-child(1) {
@@ -431,51 +488,75 @@ button {
   background: none;
   padding: 0;
 }
-.toolbar-container .tools .font-weight select {
+.toolbar-container .tools .texts .font-weight, .toolbar-container .tools .texts .text-transform {
+  margin: 1.2rem 0;
+}
+.toolbar-container .tools .texts .font-weight select, .toolbar-container .tools .texts .text-transform select {
   appearance: none;
   border: none;
+  width: 132px;
 }
-.toolbar-container .tools .letter-spacing, .toolbar-container .tools .word-spacing, .toolbar-container .tools .line-height {
-  margin: 0;
+.toolbar-container .tools .texts .font-size, .toolbar-container .tools .texts .rotate {
+  margin-bottom: 1rem;
 }
-.toolbar-container .tools .letter-spacing .inputs input, .toolbar-container .tools .word-spacing .inputs input, .toolbar-container .tools .line-height .inputs input {
-  margin-top: 0;
-  margin-right: 0.5rem;
-  margin-left: 1rem;
+.toolbar-container .tools .texts .font-size input, .toolbar-container .tools .texts .rotate input {
+  width: 133px;
 }
-.toolbar-container .tools .letter-spacing .inputs button, .toolbar-container .tools .word-spacing .inputs button, .toolbar-container .tools .line-height .inputs button {
+.toolbar-container .tools .texts .letter-spacing, .toolbar-container .tools .texts .word-spacing, .toolbar-container .tools .texts .line-height {
+  margin-top: -1rem !important;
+}
+.toolbar-container .tools .texts .letter-spacing input, .toolbar-container .tools .texts .word-spacing input, .toolbar-container .tools .texts .line-height input {
+  width: 80px;
+}
+.toolbar-container .tools .texts .letter-spacing .inputs input, .toolbar-container .tools .texts .word-spacing .inputs input, .toolbar-container .tools .texts .line-height .inputs input {
+  margin: 0 0.5rem;
+}
+.toolbar-container .tools .texts .letter-spacing .inputs button, .toolbar-container .tools .texts .word-spacing .inputs button, .toolbar-container .tools .texts .line-height .inputs button {
   padding: 0.5rem;
-  margin-left: 0.5rem;
-  text-align: center;
-  display: grid;
-  place-content: center;
+  border-radius: 0 !important;
 }
-.toolbar-container .tools .letter-spacing .inputs button:hover, .toolbar-container .tools .word-spacing .inputs button:hover, .toolbar-container .tools .line-height .inputs button:hover {
+.toolbar-container .tools .texts .letter-spacing .inputs button:hover, .toolbar-container .tools .texts .word-spacing .inputs button:hover, .toolbar-container .tools .texts .line-height .inputs button:hover {
   background: #b3b3b3;
 }
-.toolbar-container .tools .text-align p {
+.toolbar-container .tools .texts .text-align p {
   flex: 1;
 }
-.toolbar-container .tools .text-align input {
-  margin-left: 1rem;
+.toolbar-container .tools .texts .text-align input {
+  width: 134px;
 }
-.toolbar-container .tools .text-transform {
-  margin: 1rem 0 !important;
-}
-.toolbar-container .tools .text-transform select {
-  appearance: none;
-  border: none;
-  padding: 0.5rem;
-}
-.toolbar-container .tools .text-decoration input {
+.toolbar-container .tools .texts .text-decoration input {
   display: none;
 }
-.toolbar-container .tools .text-decoration label {
-  display: block;
-  padding: 0.5rem;
-  background: #000;
-  width: 50px;
-  margin: 0 0.5rem;
+.toolbar-container .tools .texts .text-decoration input:checked ~ label {
+  color: #5352ED;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+}
+.toolbar-container .tools .texts .text-decoration .radios {
+  width: 133px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.toolbar-container .tools .texts .text-decoration label {
+  transition: 0.4s ease;
+  padding: 0.3em 0.9rem;
+}
+.toolbar-container .tools .texts .text-decoration .line-t {
+  text-decoration: line-through;
+}
+.toolbar-container .tools .texts .text-decoration .under {
+  text-decoration: underline;
+}
+.toolbar-container .tools .others {
+  margin-top: 2rem;
+}
+.toolbar-container .tools .others .rotate {
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+.toolbar-container .tools .others .rotate p {
+  margin-right: 1rem;
 }
 
 .social-toolbar {
