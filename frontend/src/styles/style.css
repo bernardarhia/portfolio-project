@@ -224,6 +224,105 @@ button {
   font-size: 1.2rem;
 }
 
+.early-access {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  background: #4228E4;
+}
+.early-access .bottom, .early-access .top, .early-access .right, .early-access .rounded {
+  position: fixed;
+}
+.early-access .bottom img, .early-access .top img, .early-access .right img, .early-access .rounded img {
+  width: 100%;
+}
+.early-access .bottom {
+  bottom: -20%;
+  right: -4%;
+  width: 400px;
+  height: 400px;
+}
+.early-access .top {
+  width: 180px;
+  height: 180px;
+}
+.early-access .right {
+  width: 200px;
+  height: 200px;
+  top: 0;
+  right: 0;
+}
+.early-access .rounded {
+  bottom: 10px;
+  left: 10px;
+}
+.early-access .content {
+  margin-top: -2rem;
+  max-width: 600px;
+  text-align: center;
+  position: relative;
+  padding: 1rem;
+}
+.early-access .content .curve {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  bottom: -20px;
+  left: -50px;
+}
+.early-access .content .curve img {
+  width: 100%;
+}
+.early-access .content .circle {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  right: 0;
+}
+.early-access .content .circle img {
+  width: 100%;
+}
+.early-access .content .early-logo {
+  font-size: 2rem;
+  color: #fff;
+  font-size: bolder;
+}
+.early-access .content .intro-text {
+  padding: 1rem 0;
+}
+.early-access .content .intro-text__big, .early-access .content .intro-text__small {
+  padding: 1rem 0;
+  color: #f0f0f0;
+}
+.early-access .content .early-form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.early-access .content .early-form input, .early-access .content .early-form button {
+  display: block;
+  font-size: 1rem;
+}
+.early-access .content .early-form input {
+  padding: 1rem 4rem;
+  border-radius: 5px;
+  border: none;
+}
+.early-access .content .early-form button {
+  padding: 1rem 2rem;
+  background: #725DFA;
+  color: #f0f0f0;
+}
+
+@media (max-width: 767px) {
+  body {
+    background: #333 !important;
+  }
+}
 .btn {
   border: none;
   outline: none;

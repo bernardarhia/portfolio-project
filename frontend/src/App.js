@@ -5,28 +5,39 @@ import Signup from "./pages/Signup";
 import PublicRoute from "./routes/PublicRoute";
 import Final from "./pages/Final";
 import {userContext} from "./context/userContext";
-import Home from "./pages/Home";
+// import Home from "./pages/Home";
 import PrivateRoute from "./routes/PrivateRoute";
 import Dashboard from "./pages/Dashboard";
 import Account from "./pages/Account";
 import Editor from "./pages/Editor";
 import NotFound from "./pages/NotFound";
+import EarlyAccess from "./pages/EarlyAccess";
 // dotenv.config()
 function App() {
   const {user} = useContext(userContext);
   return (
     <Router>
       <Switch>
-        <PublicRoute exact path="/" component={Home} />
-        <PublicRoute exact path="/login" component={Login} />
-        <PublicRoute exact path="/signup" component={Signup}/>
-        <PublicRoute exact path="/final" component={Final} />
+        <PublicRoute exact path="/" component={EarlyAccess} />
+        <PrivateRoute exact path="/login" component={Login} />
+        <PrivateRoute exact path="/signup" component={Signup}/>
+        <PrivateRoute exact path="/final" component={Final} />
         <PrivateRoute exact path="/dashboard" isAuthenticated={user.isAuth} component={Dashboard}  user={user}/>
         <PrivateRoute exact path="/account" isAuthenticated={user.isAuth} component={Account}  user={user}/>
-        <PublicRoute exact path="/editor" isAuthenticated={user.isAuth} component={Editor}  user={user}/>
-        <PublicRoute exact component={NotFound}/>
+        <PrivateRoute exact path="/editor" isAuthenticated={user.isAuth} component={Editor}  user={user}/>
+        <PrivateRoute exact component={NotFound}/>
       </Switch>
     </Router>
   );
 }
 export default App;
+
+/*
+        <PublicRoute exact path="/login" component={Login} />
+        <PublicRoute exact path="/signup" component={Signup}/>
+        <PrivateRoute exact path="/final" component={Final} />
+        <PrivateRoute exact path="/dashboard" isAuthenticated={user.isAuth} component={Dashboard}  user={user}/>
+        <PrivateRoute exact path="/account" isAuthenticated={user.isAuth} component={Account}  user={user}/>
+        <PrivateRoute exact path="/editor" isAuthenticated={user.isAuth} component={Editor}  user={user}/>
+        <PublicRoute exact component={NotFound}/>
+*/

@@ -37,6 +37,7 @@ const Home = ({ location: { state: urlState }}) => {
       {!user.isAuth && (
         <div>
           <Link to="/login">Login</Link>
+          <Link to="/editor">Editor</Link>
         </div>
       )}
     </>
