@@ -289,6 +289,9 @@ button {
   color: #fff;
   font-size: bolder;
 }
+.early-access .content .early-logo span {
+  color: #0A0B2E;
+}
 .early-access .content .intro-text {
   padding: 1rem 0;
 }
