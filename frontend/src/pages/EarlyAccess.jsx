@@ -8,6 +8,7 @@ import dotsIllustration from "../assets/img/dots.svg";
 import circleIllustration from "../assets/img/circle.svg";
 import curveIllustration from "../assets/img/curve.svg";
 import roundedIllustration from "../assets/img/rounded.svg";
+import logo from "../assets/img/logo.svg";
 const EarlyAccess = () => {
   return (
     <div className="early-access">
@@ -22,7 +23,7 @@ const EarlyAccess = () => {
           <img src={roundedIllustration} alt="" />
         </div>
         <Link to="" className="early-logo">
-          Port<span>L</span>inks
+         <img src={logo} alt=""/>
         </Link>
         <div className="intro-text">
           <div className="intro-text__big">
