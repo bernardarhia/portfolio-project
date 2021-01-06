@@ -259,7 +259,7 @@ button {
   left: 10px;
 }
 .early-access .content {
-  margin-top: -2rem;
+  margin-top: -3rem;
   max-width: 600px;
   text-align: center;
   position: relative;
@@ -289,8 +289,12 @@ button {
   color: #fff;
   font-size: bolder;
 }
-.early-access .content .early-logo span {
-  color: #0A0B2E;
+.early-access .content .early-logo \  img {
+  width: 200px;
+  height: 200px;
+}
+.early-access .content .early-logo \  img img {
+  width: 100%;
 }
 .early-access .content .intro-text {
   padding: 1rem 0;
@@ -322,8 +326,19 @@ button {
 }
 
 @media (max-width: 767px) {
-  body {
-    background: #333 !important;
+  .early-access .bottom, .early-access .top, .early-access .right, .early-access .rounded {
+    display: none;
+  }
+}
+@media (max-width: 550px) {
+  .early-access .content .early-form {
+    display: block;
+  }
+  .early-access .content .early-form input, .early-access .content .early-form button {
+    width: 100%;
+  }
+  .early-access .content .intro-text__big h1 {
+    font-size: 2rem;
   }
 }
 .btn {

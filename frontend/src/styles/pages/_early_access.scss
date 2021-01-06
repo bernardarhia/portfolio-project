@@ -33,7 +33,7 @@
     left: 10px;
 }
     .content{
-        margin-top: -2rem;
+        margin-top: -3rem;
         max-width: 600px;
         text-align: center;
         position: relative;
@@ -61,8 +61,11 @@
             font-size: 2rem;
             color: #fff;
             font-size: bolder;
-            span{
-                color: #0A0B2E;
+\            img{
+                width: 200px;
+                height: 200px;img{
+                    width: 100%;
+                }
             }
         }
     .intro-text{
@@ -99,7 +102,31 @@
 
 
 @media (max-width: 767px){
-    body{
-        background:  #333 !important;
+.early-access{
+    .bottom,.top,.right,.rounded{
+      display: none;
     }
+}
+
+}
+
+@media (max-width: 550px){
+.early-access{
+   .content{
+       .early-form{
+           display: block;
+           input,button{
+            width: 100%;
+           }
+       }
+       .intro-text{
+&__big{
+    h1{
+        font-size: 2rem;
+    }
+}
+       }
+   }
+}
+
 }
