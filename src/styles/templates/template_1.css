@@ -1,0 +1,76 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: 1fr 200px;
+}
+
+.content{
+    width: auto;
+    height: 100vh;
+    margin: 0 auto;
+    background: url('/src/assets/img/template1.png');
+}
+
+.image{
+    margin: 0 auto;
+    width: 300px;
+    height: 300px;
+    background-color: darkslategray;
+    border: darkturquoise 10px solid;
+    border-radius: 150px;
+}
+
+img{
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+.name{
+    margin: 0 auto;
+}
+
+.name p{
+    font-size: clamp(1.5rem, 3vh, 3rem);
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.text p{
+    text-align: center;
+    max-width: 50%;
+    margin: auto;
+}
+
+.button{
+    text-align: center;
+    margin: auto;
+    padding: 2rem 0;
+}
+
+.sideNav{
+    background-color: dimgray;
+}
+
+.menu{
+    margin: auto;
+    text-align: center;
+}
+
+.sideNavLink{
+    padding: 3rem 0;
+}
+.sideNavLink a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: floralwhite;
+}
