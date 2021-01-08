@@ -11,6 +11,7 @@ import Dashboard from "./pages/Dashboard";
 import Account from "./pages/Account";
 import Editor from "./pages/Editor";
 import NotFound from "./pages/NotFound";
+import Template_1 from "./template_1/template_1";
 // dotenv.config()
 function App() {
   const {user} = useContext(userContext);
@@ -21,6 +22,7 @@ function App() {
         <PublicRoute exact path="/login" component={Login} />
         <PublicRoute exact path="/signup" component={Signup}/>
         <PublicRoute exact path="/final" component={Final} />
+        <PublicRoute exact path="/template1" component={Template_1} />
         <PrivateRoute exact path="/dashboard" isAuthenticated={user.isAuth} component={Dashboard}  user={user}/>
         <PrivateRoute exact path="/account" isAuthenticated={user.isAuth} component={Account}  user={user}/>
         <PublicRoute exact path="/editor" isAuthenticated={user.isAuth} component={Editor}  user={user}/>
