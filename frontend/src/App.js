@@ -12,6 +12,8 @@ import Account from "./pages/Account";
 import Editor from "./pages/Editor";
 import NotFound from "./pages/NotFound";
 import EarlyAccess from "./pages/EarlyAccess";
+import EditPassword from "./pages/EditPassword";
+import EditUser from "./pages/EditUser";
 // dotenv.config()
 function App() {
   const {user} = useContext(userContext);
@@ -19,12 +21,14 @@ function App() {
     <Router>
       <Switch>
         <PublicRoute exact path="/" component={EarlyAccess} />
+        <PublicRoute exact path="/" component={EditPassword} />
+        <PublicRoute exact path="/" component={EditUser} />
         <PrivateRoute exact path="/login" component={Login} />
         <PrivateRoute exact path="/signup" component={Signup}/>
         <PrivateRoute exact path="/final" component={Final} />
         <PrivateRoute exact path="/dashboard" isAuthenticated={user.isAuth} component={Dashboard}  user={user}/>
         <PrivateRoute exact path="/account" isAuthenticated={user.isAuth} component={Account}  user={user}/>
-        <PrivateRoute exact path="/editor" isAuthenticated={user.isAuth} component={Editor}  user={user}/>
+        <PublicRoute exact path="/editor" isAuthenticated={user.isAuth} component={Editor}  user={user}/>
         <PrivateRoute exact component={NotFound}/>
       </Switch>
     </Router>
