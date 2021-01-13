@@ -1,13 +1,13 @@
-import React, { useContext, useState } from "react";
+import React from "react";
 import Button from "../components/containers/Button";
 import FormHeaderText from "../components/containers/FormHeaderText";
 import Input from "../components/containers/Input.";
 import FormScreen from "../components/screens/FormScreen";
 import { Link } from "react-router-dom";
-import Loader from "../components/containers/Loader";
-import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
-import { userContext } from "../context/userContext";
-import { actions } from "../reducers/actions/actions";
+// import Loader from "../components/containers/Loader";
+// import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
+// import { userContext } from "../context/userContext";
+// import { actions } from "../reducers/actions/actions";
 // import requests from "../apis/requests";
 // import { setToken } from "../utils/validateToken";
 const Reset = ({ path, location: { state: urlState } }) => {
@@ -58,7 +58,6 @@ const Reset = ({ path, location: { state: urlState } }) => {
         >
           <Link to="/recovery">Recover password</Link>
         </div>
-        <Link to="/dashboard">Dashboard</Link>
       </form>
     </FormScreen>
   );

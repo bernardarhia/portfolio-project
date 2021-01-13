@@ -26,7 +26,7 @@ function App() {
         <PublicRoute exact path="/edit/password" component={EditPassword} />
         <PublicRoute exact path="/edit" component={EditUser} />
         <PublicRoute exact path="/reset_password" component={ResetPassword} />
-        <PublicRoute exact path="/reset" component={Reset} />
+        <PrivateRoute exact path="/reset" component={Reset} />
         <PrivateRoute exact path="/login" component={Login} />
         <PrivateRoute exact path="/signup" component={Signup}/>
         <PrivateRoute exact path="/final" component={Final} />
