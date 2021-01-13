@@ -324,7 +324,62 @@ button {
   background: #725DFA;
   color: #f0f0f0;
 }
+.early-access .success-modal__container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  z-index: 10;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.early-access .success-modal__container .success-modal {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.07);
+  padding: 3rem;
+  border-radius: 7px;
+  max-width: 500px;
+  text-align: center;
+  position: relative;
+  color: #29293f;
+  animation: drop 0.4s ease-out forwards;
+  visibility: hidden;
+}
+.early-access .success-modal__container .success-modal::before {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: #5352ed;
+  left: 0;
+  top: 0;
+}
+.early-access .success-modal__container .success-modal .success-text h1, .early-access .success-modal__container .success-modal .success-text p {
+  padding-bottom: 1.5rem;
+}
+.early-access .success-modal__container .success-modal .ok {
+  display: grid;
+  place-items: center;
+}
+.early-access .success-modal__container .success-modal .ok button {
+  padding: 0.9rem 1.2rem;
+  background: #000;
+  color: #fff;
+}
 
+@keyframes drop {
+  from {
+    transform: translateY(-200%);
+  }
+  to {
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
 @media (max-width: 767px) {
   .early-access .bottom, .early-access .top, .early-access .right, .early-access .rounded {
     display: none;
