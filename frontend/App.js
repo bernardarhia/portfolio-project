@@ -7,7 +7,6 @@ import Final from "./pages/Final";
 import {userContext} from "./context/userContext";
 import Home from "./pages/Home";
 import PrivateRoute from "./routes/PrivateRoute";
-
 import Dashboard from "./pages/Dashboard";
 import Account from "./pages/Account";
 import template_1 from "./templates/template_1/template_1";
