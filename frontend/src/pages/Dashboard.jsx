@@ -6,16 +6,11 @@ import { userContext } from '../context/userContext'
 const Dashboard = (props) => {
     const {setUser} = useContext(userContext);
     const redirectTo = useHistory()
-    const handleLogout = async ()=>{
-        const token = await verifyToken();
-        await logout(token)
-        setUser({type:"LOGOUT"})
-        redirectTo.push('/login')
-    }
+  
     return (
         <div>
             <h1>Dashboard</h1>
-            <button onClick={handleLogout}>Logout</button>
+            <button>Logout</button>
             <Link to={{ pathname: "/account",state: { from: props.location }}}>Account</Link>
         </div>
     )

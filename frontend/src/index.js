@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import ToolbarContext from './context/toolbarContext';
 import UserContext from './context/userContext';
 import './styles/style.css';
 const container = document.getElementById('root')
+// hah
 ReactDOM.render(
   <React.StrictMode>
     <UserContext>
-    <App />
+   <ToolbarContext> <App /></ToolbarContext>
     </UserContext>
   </React.StrictMode>,
   container

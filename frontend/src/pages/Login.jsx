@@ -3,15 +3,15 @@ import Button from "../components/containers/Button";
 import FormHeaderText from "../components/containers/FormHeaderText";
 import Input from "../components/containers/Input.";
 import FormScreen from "../components/screens/FormScreen";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Loader from "../components/containers/Loader";
-import { AiOutlineEye,AiOutlineEyeInvisible } from "react-icons/ai";
+import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { userContext } from "../context/userContext";
 import { actions } from "../reducers/actions/actions";
-import requests from "../apis/requests";
-import { setToken } from "../utils/validateToken";
+// import requests from "../apis/requests";
+// import { setToken } from "../utils/validateToken";
 const Login = ({ path, location: { state: urlState } }) => {
-  const redirectTo = useHistory();
+  // const redirectTo = useHistory();
   // checks current route's path and renders a text
   const currentPage = path.replace("/", "");
 
@@ -24,18 +24,7 @@ const Login = ({ path, location: { state: urlState } }) => {
     e.preventDefault();
     setState({ type: actions.IS_LOADING });
     try {
-      const loginUser = await requests.login("/login", userData);
-      if (loginUser) {
-        setUser({ type: actions.hasToken, user: loginUser.data.user });
-        setState({ type: actions.SUCCESS });
-        setToken(loginUser.data.token);
-        setTimeout(() => {
-          if (urlState) {
-            redirectTo.push(urlState.from.pathname);
-          }
-          redirectTo.push("/dashboard");
-        }, 1400);
-      }
+    //  log in user
     } catch (error) {
       setState({ type: actions.ERROR, error: error.response.data });
     }
@@ -68,7 +57,7 @@ const Login = ({ path, location: { state: urlState } }) => {
         <div className="password">
           <Input
             className="input"
-            type={`${state.show ?'text':'password'}`}
+            type={`${state.show ? "text" : "password"}`}
             placeholder="Password"
             value={userData.password}
             onChange={handlePassword}
@@ -78,7 +67,7 @@ const Login = ({ path, location: { state: urlState } }) => {
               setState({ type: actions.SHOW });
             }}
           >
-            {state.show ? <AiOutlineEyeInvisible />:<AiOutlineEye />}
+            {state.show ? <AiOutlineEyeInvisible /> : <AiOutlineEye />}
           </div>
         </div>
         <div className="submit_btn">
