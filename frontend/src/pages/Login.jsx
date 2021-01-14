@@ -3,15 +3,15 @@ import Button from "../components/containers/Button";
 import FormHeaderText from "../components/containers/FormHeaderText";
 import Input from "../components/containers/Input.";
 import FormScreen from "../components/screens/FormScreen";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Loader from "../components/containers/Loader";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { userContext } from "../context/userContext";
 import { actions } from "../reducers/actions/actions";
-import requests from "../apis/requests";
-import { setToken } from "../utils/validateToken";
+// import requests from "../apis/requests";
+// import { setToken } from "../utils/validateToken";
 const Login = ({ path, location: { state: urlState } }) => {
-  const redirectTo = useHistory();
+  // const redirectTo = useHistory();
   // checks current route's path and renders a text
   const currentPage = path.replace("/", "");
 
