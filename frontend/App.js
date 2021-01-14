@@ -7,9 +7,12 @@ import Final from "./pages/Final";
 import {userContext} from "./context/userContext";
 import Home from "./pages/Home";
 import PrivateRoute from "./routes/PrivateRoute";
-
 import Dashboard from "./pages/Dashboard";
 import Account from "./pages/Account";
+import Editor from "./pages/Editor";
+import NotFound from "./pages/NotFound";
+import Template_1 from "./template_1/template_1";
+// dotenv.config()
 import template_1 from "./templates/template_1/template_1";
 function App() {
   const {user} = useContext(userContext);

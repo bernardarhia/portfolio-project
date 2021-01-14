@@ -8,16 +8,19 @@
     font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.main{
+.template-one-main {
     display: grid;
     grid-template-columns: 1fr 200px;
 }
 
-.content{
-    width: auto;
+.template-one-bg{
+    background: url('/src/assets/img/template1.png');
+}
+
+.template-one-content {
     height: 100vh;
     margin: 0 auto;
-    background: url('/src/assets/img/template1.png');
+    padding-top: 120px;
 }
 
 .image{
@@ -46,31 +49,62 @@ img{
 }
 
 .text p{
-    text-align: center;
-    max-width: 50%;
-    margin: auto;
+    max-width: 30%;
+    margin: auto;   
 }
 
-.button{
+.template-one-button {
     text-align: center;
     margin: auto;
     padding: 2rem 0;
 }
 
-.sideNav{
-    background-color: dimgray;
+button{
+    background-color: black;
+    padding: 0.8rem 2.5rem;
+    color: wheat;
+    font-size: 1.5rem;
+    border: none;
 }
 
-.menu{
+.template-one-sideNav {
+    padding-top: 150px;
+}
+
+.template-one-menu {
     margin: auto;
     text-align: center;
 }
 
 .sideNavLink{
-    padding: 3rem 0;
+    padding: 2.5rem 0;
 }
 .sideNavLink a{
     text-decoration: none;
     font-size: 1.5rem;
-    color: floralwhite;
+    color: #000;
+}
+
+.template-one-social{
+    margin: 0 auto;
+}
+
+.social-div{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0 0 0.5rem 5rem;
+}
+
+.social{
+    padding-right: 1rem;
+    font-size: 2rem;
+}
+
+.social a{
+    text-decoration: none;
+    color: black;
 }
