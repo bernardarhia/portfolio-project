@@ -5,7 +5,6 @@ import ToolbarContext from './context/toolbarContext';
 import UserContext from './context/userContext';
 import './styles/style.css';
 const container = document.getElementById('root')
-// hah
 ReactDOM.render(
   <React.StrictMode>
     <UserContext>
