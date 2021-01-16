@@ -4,3 +4,10 @@ $light_text:#A3A1A1;
 $input_bg:rgba(237,240,249,0.25);
 $input_shadow:inset 0 0 3px rgba(0,0,0, 0.02);
 $glass:rgba(255,255,255,0.09);
+
+%flex-sb{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+}

@@ -21,6 +21,7 @@ function App() {
       <Switch>
         <PublicRoute exact path="/" component={Home} />
         <PublicRoute exact path="/login" component={Login} />
+        <PublicRoute exact path="/editor" component={Editor} />
         <PublicRoute exact path="/signup" component={Signup}/>
         <PublicRoute exact path="/final" component={Final} />
         <PublicRoute exact path="/template1" component={template_1} />
