@@ -16,10 +16,7 @@ It includes:
 All this data should have a type of URL. We will just take the url of the provided accounts
 */
 const userContact=new mongoose.Schema({
-    facebook:{
-        type: URL,
-        trim: true,
-      },
+  
 })
 
 const accountInfo = mongoose.model("userContactInfo", userContact);
